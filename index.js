@@ -16,11 +16,15 @@ module.exports = postcss.plugin('postcss-print-zindex', function (opts) {
 
         // Transform CSS AST here
         root.walkDecls('z-index', decl => {
-            const zindex_val = decl.value > 5 ? chalk.bgRed(decl.value) : chalk.yellow(decl.value);
+            const val = decl.value > 5 ? chalk.bgRed(decl.value) : chalk.yellow(decl.value);
+            const selector = decl.parent.selector.split(/,\s|,/).join(',\n');
+            const file = decl.source.input.from.split('\\').slice(-1)[0];
+            const line = decl.source.start.line;
+
             table.push([
-                zindex_val,
-                chalk.magenta(decl.parent.selector),
-                `${chalk.gray(decl.source.input.from)}\n\line: ${decl.source.start.line}`
+                val,
+                chalk.magenta(selector),
+                `line: ${line} \nfile: ${file}`
             ]);
         });
 
