@@ -18,7 +18,7 @@ module.exports = postcss.plugin('postcss-print-zindex', function (opts) {
         root.walkDecls('z-index', decl => {
             const val = decl.value > 5 ? chalk.bgRed(decl.value) : chalk.yellow(decl.value);
             const selector = decl.parent.selector.split(/,\s|,/).join(',\n');
-            const file = decl.source.input.from.split('\\').slice(-1)[0];
+            const file = decl.source.input.from.split(/\/|\\/).slice(-1)[0];
             const line = decl.source.start.line;
 
             table.push([
