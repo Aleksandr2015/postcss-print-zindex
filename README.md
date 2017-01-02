@@ -19,11 +19,11 @@ See [PostCSS] docs for examples for your environment.
 
 ### Usage with Gulp
 
-```
+```js
 npm install --save-dev gulp gulp-postcss github:rosivanov/postcss-print-zindex
 ```
 
-```
+```js
 var gulp = require('gulp'),
 postcss = require('gulp-postcss'),
 printZ = require('postcss-print-zindex');
@@ -33,3 +33,5 @@ gulp.task('print-z', function() {
     .pipe(postcss([ printZ ]));
 });
 ```
+
+[gulp.task.js](gulp.task.js)
