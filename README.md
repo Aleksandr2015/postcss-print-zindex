@@ -10,7 +10,7 @@ Output example
 [https://travis-ci.org/rosivanov/postcss-print-zindex/jobs/188204960#L593](https://travis-ci.org/rosivanov/postcss-print-zindex/jobs/188204960#L593)
 
 > Please Note!  
-> It does not change z-index values because is **unsafe**.  
+> It does not change z-index values because this is **unsafe**.  
 > Inline-styles and styles managed by javascript are not supported.
 
 ## Usage
