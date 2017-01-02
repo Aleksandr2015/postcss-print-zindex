@@ -27,7 +27,7 @@
     "jest": "^18.0.0"
   },
   "scripts": {
-    "test": "jest && eslint *.js"
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss/es5",
