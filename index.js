@@ -4,7 +4,11 @@ var postcss = require('postcss'),
 
 // Table headers
 const table = new Table({
-    head: [chalk.green('Z-index Value'), chalk.green('Selector'), chalk.green('From')]
+    head: [
+        chalk.green('Z-index Value'),
+        chalk.green('Selector'),
+        chalk.green('From')
+    ]
 });
 
 module.exports = postcss.plugin('postcss-print-zindex', function (opts) {
