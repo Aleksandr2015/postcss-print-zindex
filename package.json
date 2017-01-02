@@ -1,7 +1,7 @@
 {
   "name": "postcss-print-zindex",
   "version": "0.0.0",
-  "description": "PostCSS plugin prints z-index values into terminal.",
+  "description": "PostCSS plugin prints out z-index values into terminal",
   "keywords": [
     "postcss",
     "css",
