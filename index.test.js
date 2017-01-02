@@ -1,5 +1,5 @@
 var postcss = require('postcss');
-
+var fs = require('fs');
 var plugin = require('./index.js');
 
 function run(input, output, opts) {
@@ -13,6 +13,8 @@ function run(input, output, opts) {
 /* Write tests here
 */
 
-it('does something', () => {
-    return run('a{ }', 'a{ }', { });
+it('printing zindex', () => {
+    return fs.readFile('csstest/styles.css', (err, css) => {
+        return run(css.toString(), css.toString(), { });
+    });
 });
